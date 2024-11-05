@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-list</title>
+<script defer src="main.js"></script></head>
+<body>
+  <nav>
+    <section class="categories">
+      <h1><a href="#" id="new-project">New Project</a></h1>
+      <ul>        
+        <li><a href="#" id="archive">Archive</a></li>
+        <li><a href="#" id="today">Today</a></li>
+        <li><a href="#" id="upcoming">Upcoming</a></li>
+        <li><a href="#" id="no-pressure">No pressure</a></li>
+      </ul>
+    </section>
+  </nav>
+  <main>
+    <h1></h1>
+    <button id="new-task" style="display: none;">New Task</button>
+    <div id="content"></div>
+  </main>
+  <dialog id="new-project-dialog">
+    <form method="dialog">
+      <label for="project-title">Project Title:</label>
+      <input type="text" name="project-title" id="project-title"><br><br>
+      <button id="add-project">Add Project</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="new-task-dialog">
+    <form method="dialog">
+      <label for="task-title">Task Title:</label><br>
+      <input type="text" name="task-title" id="task-title"><br><br>
+      <label for="task-description">Task Description:</label><br>
+      <textarea name="task-description" id="task-description" cols="20" rows="5"></textarea><br><br>
+      <label for="task-due-date">Due Date:</label>
+      <input type="date" name="task-due-date" id="task-due-date"><br><br>
+      <label for="task-priority">Task Priority:</label>
+      <select name="task-priority" id="task-priority">
+        <option value="0-urgent">Urgent</option>
+        <option value="1-important">Important</option>
+        <option value="2-routine">Routine</option>
+        <option value="3-self-imposed">Self-imposed</option>
+        <option value="4-forgettable">Forgettable</option>
+      </select>
+      <br><br>
+      <button id="add-task">Add Task</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="new-checklist-dialog">
+    <h1>Write your list:</h1>
+    <form method="dialog">
+      <input type="text" class="checklist-element">
+      <input type="text" class="checklist-element">
+      <input type="text" class="checklist-element">
+      <input type="text" class="checklist-element">
+      <br><br>
+      <button id="add-checklist">Create Checklist</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="edit-title-dialog">
+    <form method="dialog">
+      <label for="change-title">Change Title</label>
+      <input type="text" name="change-title" id="change-title">
+      <br><br>
+      <button id="edit-title">Apply Change</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="edit-description-dialog">
+    <form method="dialog">
+      <label for="change-description">Change Description</label>
+      <textarea name="change-description" id="change-description"></textarea>
+      <br><br>
+      <button id="edit-description">Apply Change</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="edit-due-date-dialog">
+    <form method="dialog">
+      <label for="change-due-date">Change Date</label>
+      <input type="date" name="change-due-date" id="change-due-date">
+      <br><br>
+      <button id="edit-due-date">Apply Change</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+  <dialog id="edit-priority-dialog">
+    <form method="dialog">
+      <label for="change-priority">Change Priority</label>
+      <select name="change-priority" id="change-priority">
+        <option value="0-urgent">Urgent</option>
+        <option value="1-important">Important</option>
+        <option value="2-routine">Routine</option>
+        <option value="3-self-imposed">Self-imposed</option>
+        <option value="4-forgettable">Forgettable</option>
+      </select>
+      <br><br>
+      <button id="edit-priority">Apply Change</button><br><br>
+      <button class="close-dialog">Cancel</button>
+    </form>
+  </dialog>
+</body>
+</html>
